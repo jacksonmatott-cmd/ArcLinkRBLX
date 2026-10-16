@@ -1,0 +1,16 @@
+{
+  "name": "arclink-roblox-hub",
+  "version": "2.0.0",
+  "private": true,
+  "description": "A Roblox-focused community suite with member records, rules, roles, leave tracking, and a Cloudflare Worker API proxy.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "check": "node --check src/index.js && node --check public/app.js && node --check functions/api/health.js && node --check functions/api/roblox/user.js && node --check functions/api/roblox/group.js && node --check tests/features.test.js",
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "wrangler": "^4.42.0"
+  },
+  "type": "module"
+}
